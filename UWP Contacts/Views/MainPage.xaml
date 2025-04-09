@@ -1,0 +1,25 @@
+﻿<Page
+    x:Class="UWP_Contacts.Views.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Style="{StaticResource PageStyle}"
+    mc:Ignorable="d">
+    <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            <ListView x:Name="ContactsList" ItemsSource="{Binding Contacts}" HorizontalAlignment="Left" SelectionChanged="ContactsList_SelectionChanged" Height="900" Background="#FF212121" Margin="100,0,0,0"/>
+            <TextBox x:Name="NameText" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Height="100" Width="400" Margin="0,200,150,0" FontSize="36"/>
+            <TextBox x:Name="NumberText" HorizontalAlignment="Right" TextWrapping="Wrap" VerticalAlignment="Top" Height="100" Width="400" Margin="0,400,150,0" FontSize="36"/>
+            <Button Content="Add Contact" VerticalAlignment="Top" Width="300" Click="Add_Click" Height="100" HorizontalAlignment="Right" Margin="0,650,150,0" FontSize="36" FontWeight="Bold"/>
+            <Button Content="Delete Contact" Margin="949,800,150,0" VerticalAlignment="Top" Width="300" Click="Delete_Click" HorizontalAlignment="Right" Height="100" FontSize="36" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="Name" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Width="140" Height="60" Margin="0,130,400,0"/>
+            <TextBlock HorizontalAlignment="Right" TextWrapping="Wrap" Text="Phone Number" VerticalAlignment="Top" FontSize="48" FontWeight="Bold" Width="345" Height="60" Margin="0,330,200,0"/>
+            <!--
+                The SystemControlPageBackgroundChromeLowBrush background represents where you should place your content. 
+                Place your content here.
+            -->
+        </Grid>
+    </Grid>
+</Page>
